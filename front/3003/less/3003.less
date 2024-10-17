@@ -1,0 +1,278 @@
+@text-color: #fff;
+@font-family: sans-serif;
+@font-size-heading: 39px;
+@font-weight-text: 700;
+@no-bg-rep: no-repeat;
+
+.heading {
+    color: @text-color;
+    font-family: @font-family;
+    font-size: @font-size-heading;
+    font-weight: @font-weight-text;
+    line-height: 1.2em;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.heading-title {
+    font-family: @font-family;
+    font-size: 16px;
+    font-weight: @font-weight-text;
+    text-transform: uppercase;
+    color: #68C419;
+    margin: 0;
+    line-height: 1em;
+}
+
+.content {
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+@keyframes MoveFromLeftToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes MoveFromRightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes MoveFromTopToBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.type-3003 {
+
+    .col-content {
+        padding: 0;
+        margin: 0;
+
+        .col-left {
+            padding: 80px 80px 80px 117px;
+            background-color: #242859;
+            background-image: url(../img/bg_img_1.png);
+            background-repeat: @no-bg-rep;
+            background-position: top left;
+            color: @text-color;
+            font-family: @font-family;
+            animation: MoveFromLeftToRight 0.8s;
+            transition: all 0.8s ease-in-out;
+
+            h2 {
+                .heading
+            }
+
+            p {
+                .content
+            }
+
+            .video-wrapper {
+                width: 544px;
+                height: 362px;
+                max-width: 100%;
+            }
+        }
+
+        .col-right {
+            position: relative;
+            top: 68px;
+            padding: 80px 117px 80px 80px;
+            background-image: url(../img/bg_img_2.png);
+            background-repeat: @no-bg-rep;
+            background-position: bottom right;
+            background-color: #343b83;
+            color: @text-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            animation: MoveFromRightToLeft 0.8s;
+            transition: all 0.8s ease-in-out;
+            z-index: 1;
+
+            h6 {
+                .heading-title
+            }
+
+            h2 {
+                .heading
+            }
+
+            p {
+                .content
+            }
+
+            .stats {
+                .item-title {
+                    display: inline-block;
+                    margin-bottom: 7px;
+                }
+
+                .progress {
+                    height: 12px;
+                    overflow: visible;
+
+                    .progress-bar {
+                        position: relative;
+                        border-radius: 20px;
+                        background-color: #d2b81b;
+
+                        .percentage-number {
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-145%);
+                            padding-right: 5px;
+                            color: #d2b81b;
+                        }
+
+                        .progress-bar {
+                            background-color: #d2b81b;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .box {
+        position: relative;
+        background-image: url(../img/two-damaged-phones-displayed-on-table-in-electronic-repair-workshop.jpg);
+        background-position: center center;
+        background-repeat: @no-bg-rep;
+        background-size: cover;
+        padding-bottom: 112px;
+
+        .content-title {
+            padding: 32px 430px;
+            z-index: 1;
+
+            h6 {
+                .heading-title
+            }
+
+            h2 {
+                .heading
+            }
+        }
+
+        .content-card {
+            padding: 0 117px;
+
+            .card {
+                background-color: #fff;
+                border-radius: 10px;
+                border-bottom: solid 5px #68c419;
+                padding: 15px 30px;
+
+                h3 {
+                    color: #68C419;
+                    font-size: 61px;
+                    font-weight: 700;
+                    line-height: 1.1em;
+                    letter-spacing: -2px;
+                }
+
+                p {
+                    .content
+                }
+            }
+
+            .col-md-3:nth-child(1) {
+                animation: MoveFromTopToBottom 1.2s ease-in-out 0.2s forwards;
+                transition: all 0.8s ease-in-out;
+            }
+
+            .col-md-3:nth-child(2) {
+                animation: MoveFromTopToBottom 1.2s ease-in-out 0.3s forwards;
+                transition: all 0.8s ease-in-out;
+            }
+
+            .col-md-3:nth-child(3) {
+                animation: MoveFromTopToBottom 1.2s ease-in-out 0.2s forwards;
+                transition: all 0.8s ease-in-out;
+            }
+
+            .col-md-3:nth-child(4) {
+                animation: MoveFromTopToBottom 1.2s ease-in-out 0.3s forwards;
+                transition: all 0.8s ease-in-out;
+
+            }
+
+        }
+    }
+
+    .box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(19, 21, 47, 0.4);
+        z-index: 0;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1024px) {
+    .col-content {
+
+        .col-left,
+        .col-right {
+            padding: 20px !important;
+            height: auto !important;
+            background-position: center !important;
+        }
+
+        .col-right {
+            top: 0px !important;
+        }
+    }
+
+    .col-left h2,
+    .col-right h2 {
+        font-size: 24px !important;
+    }
+
+    .box {
+        .content-title {
+            padding: 23px 50px !important;
+
+            h2 {
+                font-size: 24px !important;
+            }
+        }
+
+        .content-card {
+            padding: 20px !important;
+
+            h3 {
+                font-size: 32px !important;
+            }
+        }
+    }
+}
